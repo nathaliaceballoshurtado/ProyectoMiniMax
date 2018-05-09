@@ -5,6 +5,8 @@
  */
 package alphazero;
 
+import alphazero.Gui.Gui;
+
 /**
  *
  * @author invitado
@@ -17,6 +19,7 @@ public class AlphaZero {
     public static void main(String[] args) {
         
         Gui g = new Gui();
+        Tablero t = new Tablero(5);
         // TODO code application logic here
     }
     

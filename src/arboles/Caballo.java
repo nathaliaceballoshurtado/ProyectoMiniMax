@@ -45,14 +45,32 @@ public class Caballo extends Base {
         this.posicion = posicion;
     }
 
-    public void mover() {
+    //RETORNA LA COORDENADA A LA QUE SE LLEGA CUANDO MAX JUEGO SU TURNO
+    public int[] crearArbolDeJuego() {
+        int[] decision = new int[2];
+
+        for (int i = 0; i < 1; i++) {
+            int[][] matrixAux = super.getMatrix(); 
+            
+            for (int j = 0; j < 4; j++) {
+
+                /*  
+                 */
+            }
+        }
+
+        return decision;
+    }
+
+    //RETORNA LOS POSIBLES MOVIMIENTOS PARA UN CABALLO, A PARTIR DE UNA ESTADO DE JUEGO INDICADO
+    public void posiblesMovimientos() {
         int profundidadArbolJuego = 3;
         for (int j = 0; j < profundidadArbolJuego; j++) {
-            
+
             int[] posicionActual = this.getPosicion();
-            
+
             int[][] movimientosPosibles = new int[8][2];
-            
+
             movimientosPosibles[0] = new int[]{posicionActual[0] + 1, posicionActual[1] - 2};  // Izquierda      
             movimientosPosibles[1] = new int[]{posicionActual[0] - 1, posicionActual[1] - 2};  // Izquierda
 
@@ -71,6 +89,14 @@ public class Caballo extends Base {
 
                     if (yaPasoPorCasilla(movimientosPosibles[0])) {
 
+                        this.crearArbolDeJuego();
+
+                        
+                        
+                        
+                        if (super.esManzana(posicion)) {
+                            manzanas++;
+                        }
                     }
 
                 }
